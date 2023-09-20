@@ -10,26 +10,11 @@ public class ProductDTO implements Serializable {
 
 	private String productName;
 	private String description;
-	private String category;
-	private double price;
-	private int quantity;
-	private String supplier;
-
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
-	public String getSupplier() {
-		return supplier;
-	}
-
-	public void setSupplier(String supplier) {
-		this.supplier = supplier;
-	}
+	private Categories category;
+	private int price;
+	private boolean isDeleted;
+	private String createdBy;
+	private String createdAt;
 
 	public Long getProductId() {
 		return productId;
@@ -55,20 +40,44 @@ public class ProductDTO implements Serializable {
 		this.description = description;
 	}
 
-	public String getCategory() {
+	public Categories getCategory() {
 		return category;
 	}
 
-	public void setCategory(String category) {
+	public void setCategory(Categories category) {
 		this.category = category;
 	}
 
-	public double getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(int price) {
 		this.price = price;
+	}
+
+	public boolean isDeleted() {
+		return isDeleted;
+	}
+
+	public void setDeleted(boolean isDeleted) {
+		this.isDeleted = isDeleted;
+	}
+
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public String getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(String createdAt) {
+		this.createdAt = createdAt;
 	}
 
 }
